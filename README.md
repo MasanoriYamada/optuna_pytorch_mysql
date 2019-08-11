@@ -6,7 +6,7 @@
 
 ![image-20190811183802094](./img/hparams.png)
 
-![image-20190811183831484](./hparam_table.png)
+![image-20190811183831484](./img/hparam_table.png)
 
 
 
