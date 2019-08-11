@@ -2,11 +2,11 @@
 
 ### Results mnist(train size 6000) with pytorch on epoch 10
 
-![image-20190811183700962](/Users/yamada/Library/Application Support/typora-user-images/image-20190811183700962.png)
+![image-20190811183700962](./img/scalars.png)
 
-![image-20190811183802094](/Users/yamada/Library/Application Support/typora-user-images/image-20190811183802094.png)
+![image-20190811183802094](./img/hparams.png)
 
-![image-20190811183831484](/Users/yamada/Library/Application Support/typora-user-images/image-20190811183831484.png)
+![image-20190811183831484](./hparam_table.png)
 
 
 
