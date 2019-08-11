@@ -1,0 +1,30 @@
+version: '2.3'
+
+services:
+  optuna_pytorch:
+    build: ./
+    container_name: "optuna_pytorch"
+    working_dir: "/workspace"
+    ports:
+    - "6006:6006"
+    - "8888:8888"
+    #runtime: nvidia
+    volumes:
+    - .:/workspace
+    tty: true
+
+  db:
+    image: mysql:5.7
+    container_name: 'db'
+    ports:
+        - "3306:3306"
+    volumes:
+        # 初期データを投入するSQLが格納されているdir
+        - ./db/mysql_init:/docker-entrypoint-initdb.d
+        # 永続化するときにマウントするdir
+        - ./db/mysql_data:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_USER: root
+        MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        MYSQL_DATABASE: optuna
